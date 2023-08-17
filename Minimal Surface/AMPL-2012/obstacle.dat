@@ -1,0 +1,3 @@
+let nx := 50;
+let ny := 50;
+let {i in Nx,j in Ny} v[i,j]:=1-(2*(i/nx)-1)^2;

@@ -1,0 +1,15 @@
+SOLVER -> MINOS 5.51: optimal solution found. 
+Valor de la funcion objetivo ->  3.0997405203583437
+Tiempo empleado ->  7.4375
+---------------------------------------
+SOLVER -> LOQO 6.01: optimal solution 
+Valor de la funcion objetivo ->  2.4685380450862673
+Tiempo empleado ->  8.921875
+---------------------------------------
+SOLVER -> Ipopt 3.8.0: Locally optimal 
+Valor de la funcion objetivo ->  2.4685406601260063
+Tiempo empleado ->  10.578125
+---------------------------------------
+SOLVER -> SNOPT 7.2-8: Optimal solution found 
+Valor de la funcion objetivo ->  2.468538066548479
+Tiempo empleado ->  496.375
