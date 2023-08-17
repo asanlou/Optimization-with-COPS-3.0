@@ -1,0 +1,116 @@
+model obstacle.mod;
+data obstacle.dat;
+
+option solver minos;
+option minos_options 'major_iterations=2000'; 
+
+solve;
+
+param OutputFileMat symbolic := "output_mat.txt";
+param OutputFile symbolic := "output.txt";
+
+display '---------------------------------------';
+
+display 'minos';
+display _total_solve_time;
+
+print 'SOLVER -> MINOS 5.51: optimal solution found. ' > (OutputFile);
+
+print 'Valor de la funcion objetivo -> ',z >> (OutputFile);
+print 'Tiempo empleado -> ',_total_solve_time >> (OutputFile);
+
+print 'MINOS 5.51' > (OutputFileMat);
+print " " >> (OutputFileMat);
+for {i in Nx,j in Ny} {
+print v[i,j] >> (OutputFileMat);
+}
+
+
+print '---------------------------------------' >> (OutputFile);
+print '---------------------------------------' >> (OutputFileMat);
+display '---------------------------------------';
+
+option solver loqo;
+solve;
+
+display 'loqo';
+display _total_solve_time;
+
+print 'SOLVER -> LOQO 7.03: optimal solution ' >> (OutputFile);
+
+print 'Valor de la funcion objetivo -> ',z >> (OutputFile);
+print 'Tiempo empleado -> ',_total_solve_time >> (OutputFile);
+
+print 'LOQO 7.03' >> (OutputFileMat);
+print " " >> (OutputFileMat);
+for {i in Nx,j in Ny} {
+print v[i,j] >> (OutputFileMat);
+}
+
+
+print '---------------------------------------' >> (OutputFile);
+print '---------------------------------------' >> (OutputFileMat);
+display '---------------------------------------';
+
+option solver conopt;
+solve;
+
+display 'conopt';
+display _total_solve_time;
+
+print 'SOLVER -> CONOPT 3.17A: Locally optimal ' >> (OutputFile);
+
+print 'Valor de la funcion objetivo -> ',z >> (OutputFile);
+print 'Tiempo empleado -> ',_total_solve_time >> (OutputFile);
+
+print 'CONOPT 3.17A' >> (OutputFileMat);
+print " " >> (OutputFileMat);
+for {i in Nx,j in Ny} {
+print v[i,j] >> (OutputFileMat);
+}
+
+print '---------------------------------------' >> (OutputFile);
+print '---------------------------------------' >> (OutputFileMat);
+display '---------------------------------------';
+
+option solver snopt;
+solve;
+
+display 'snopt';
+display _total_solve_time;
+
+print 'SOLVER -> SNOPT 7.5-1.2: Optimal solution found ' >> (OutputFile);
+
+print 'Valor de la funcion objetivo -> ',z >> (OutputFile);
+print 'Tiempo empleado -> ',_total_solve_time >> (OutputFile);
+
+print 'SNOPT 7.5-1.2' >> (OutputFileMat);
+print " " >> (OutputFileMat);
+for {i in Nx,j in Ny} {
+print v[i,j] >> (OutputFileMat);
+}
+
+print '---------------------------------------' >> (OutputFileMat);
+
+
+#KNITRO es un solver de pago. No nos permite emplearlo debido 
+#a las dimensiones de nuestro problema.
+#print '---------------------------------------' >> (OutputFile);
+#display '---------------------------------------';
+
+#option solver knitro;
+#solve;
+
+#display 'knitro';
+#display _total_solve_time;
+#display theta[1],theta[2],theta[3];
+
+#print 'SOLVER -> knitro ' >> (OutputFile);
+
+#print 'Valor de la funcion objetivo -> ',z >> (OutputFile);
+#print 'Tiempo empleado -> ',_total_solve_time >> (OutputFile);
+
+#print 'theta1=',theta[1] >> (OutputFile);
+#print 'theta2=',theta[2] >> (OutputFile);
+#print 'theta3=',theta[3] >> (OutputFile);
+
