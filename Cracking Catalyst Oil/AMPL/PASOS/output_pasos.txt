@@ -1,0 +1,27 @@
+SOLVER -> MINOS 5.51: optimal solution found. 
+Valor de la funcion objetivo ->  0.005141623346243957
+Tiempo empleado ->  0.17329399999999984
+theta1= 12.29705131810334
+theta2= 8.068558591051728
+theta3= 1.6965077661614927
+---------------------------------------
+SOLVER -> LOQO 7.03: optimal solution 
+Valor de la funcion objetivo ->  0.005140994813664687
+Tiempo empleado ->  0.21164799999999984
+theta1= 12.296938224936833
+theta2= 8.068493840283352
+theta3= 1.6965034288519114
+---------------------------------------
+SOLVER -> CONOPT 3.17A: Locally optimal 
+Valor de la funcion objetivo ->  0.00514162334624397
+Tiempo empleado ->  0.2618549999999997
+theta1= 12.29705129895892
+theta2= 8.068558585123418
+theta3= 1.6965077821518264
+---------------------------------------
+SOLVER -> SNOPT 7.5-1.2: Optimal solution found 
+Valor de la funcion objetivo ->  0.00514162334624397
+Tiempo empleado ->  0.3031449999999998
+theta1= 12.29705129895892
+theta2= 8.068558585123418
+theta3= 1.6965077821518264
